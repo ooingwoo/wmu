@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-primary": "#ffffff",
+                "on-background": "#1a1c1c",
+                "surface-container-low": "#f3f3f3",
+                "surface-container-highest": "#e2e2e2",
+                "on-tertiary-fixed": "#1a1c1c",
+                "inverse-primary": "#afc8f0",
+                "on-primary-container": "#6f88ad",
+                "on-error": "#ffffff",
+                "tertiary-container": "#1d1f1f",
+                "background": "#f9f9f9",
+                "secondary-fixed": "#ffe088",
+                "primary-fixed": "#d4e3ff",
+                "secondary": "#735c00",
+                "on-primary-fixed-variant": "#2f486a",
+                "surface-container": "#eeeeee",
+                "tertiary-fixed-dim": "#c6c6c6",
+                "error": "#ba1a1a",
+                "surface-container-lowest": "#ffffff",
+                "surface-variant": "#e2e2e2",
+                "primary-fixed-dim": "#afc8f0",
+                "error-container": "#ffdad6",
+                "outline-variant": "#c4c6cf",
+                "inverse-on-surface": "#f1f1f1",
+                "surface-bright": "#f9f9f9",
+                "tertiary": "#050606",
+                "surface-container-high": "#e8e8e8",
+                "on-surface": "#1a1c1c",
+                "on-tertiary-fixed-variant": "#464747",
+                "tertiary-fixed": "#e3e2e2",
+                "on-secondary-container": "#745c00",
+                "inverse-surface": "#2f3131",
+                "on-secondary-fixed-variant": "#574500",
+                "on-error-container": "#93000a",
+                "surface": "#f9f9f9",
+                "on-tertiary-container": "#868686",
+                "surface-tint": "#476083",
+                "on-tertiary": "#ffffff",
+                "secondary-fixed-dim": "#e9c349",
+                "primary": "#000613",
+                "surface-dim": "#dadada",
+                "on-primary-fixed": "#001c3a",
+                "outline": "#74777f",
+                "on-secondary-fixed": "#241a00",
+                "secondary-container": "#fed65b",
+                "on-secondary": "#ffffff",
+                "on-surface-variant": "#43474e",
+                "primary-container": "#001f3f"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "margin-mobile": "16px",
+                "gutter": "24px",
+                "unit": "8px",
+                "container-max": "1280px",
+                "margin-desktop": "64px",
+                "section-padding": "120px"
+            },
+            "fontFamily": {
+                "body-lg": ["Manrope"],
+                "headline-md": ["Noto Serif"],
+                "headline-xl": ["Noto Serif"],
+                "display-lg": ["Noto Serif"],
+                "body-md": ["Manrope"],
+                "label-caps": ["Manrope"]
+            },
+            "fontSize": {
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-bottom-color: #735c00 !important;
+        }
+        .form-section-gap {
+            margin-bottom: 64px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 h-20">
+<div class="max-w-7xl mx-auto px-8 h-full flex justify-between items-center">
+<div class="text-2xl font-serif font-bold tracking-tighter text-blue-950 dark:text-white uppercase">WORLD MISS UNIVERSITY</div>
+<div class="hidden md:flex items-center space-x-8 font-serif uppercase tracking-widest text-sm">
+<a class="text-slate-500 hover:text-yellow-600 transition-colors duration-300" href="#">Home</a>
+<a class="text-slate-500 hover:text-yellow-600 transition-colors duration-300" href="#">Domestic</a>
+<a class="text-slate-500 hover:text-yellow-600 transition-colors duration-300" href="#">International</a>
+<a class="text-yellow-600 border-b-2 border-yellow-600 pb-1" href="#">Application</a>
+<a class="text-slate-500 hover:text-yellow-600 transition-colors duration-300" href="#">News</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-3 font-label-caps uppercase tracking-widest text-xs hover:bg-opacity-90 transition-all active:scale-95">
+                Apply Now
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-8 max-w-5xl mx-auto">
+<!-- Hero Title Section -->
+<header class="mb-20 text-center">
+<span class="font-label-caps text-secondary uppercase tracking-[0.3em] block mb-4">Official Candidate Registry</span>
+<h1 class="font-display-lg text-primary mb-6">Online Application</h1>
+<p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Join the legacy of excellence. Please provide comprehensive and accurate information to complete your professional profile for the upcoming season of World Miss University.
+            </p>
+</header>
+<form class="space-y-16">
+<!-- Section 1: Personal Identity -->
+<section class="form-section-gap">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="person_outline">person_outline</span>
+</div>
+<h2 class="font-headline-md text-primary">Personal Identity</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-8">
+<div class="flex flex-col">
+<label class="font-label-caps text-on-surface-variant mb-2">FULL LEGAL NAME</label>
+<input class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-3 focus:ring-0 text-body-md" placeholder="As it appears on passport" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-on-surface-variant mb-2">NATIONALITY</label>
+<select class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-3 focus:ring-0 text-body-md appearance-none">
+<option value="">Select country</option>
+<option value="US">United States</option>
+<option value="UK">United Kingdom</option>
+<option value="FR">France</option>
+<option value="IT">Italy</option>
+<option value="JP">Japan</option>
+</select>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-on-surface-variant mb-2">PASSPORT NUMBER</label>
+<input class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-3 focus:ring-0 text-body-md" placeholder="Valid for at least 12 months" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-on-surface-variant mb-2">HEIGHT (CM)</label>
+<input class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-3 focus:ring-0 text-body-md" placeholder="175" type="number"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-on-surface-variant mb-2">EMAIL ADDRESS</label>
+<input class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-3 focus:ring-0 text-body-md" placeholder="example@domain.com" type="email"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-on-surface-variant mb-2">CURRENT AGENCY</label>
+<input class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-3 focus:ring-0 text-body-md" placeholder="Leave blank if independent" type="text"/>
+</div>
+</div>
+</section>
+<!-- Section 2: Portfolio & Socials -->
+<section class="form-section-gap">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="public">public</span>
+</div>
+<h2 class="font-headline-md text-primary">Portfolio &amp; Social Profile</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-8">
+<div class="flex flex-col">
+<label class="font-label-caps text-on-surface-variant mb-2">PORTFOLIO URL</label>
+<input class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-3 focus:ring-0 text-body-md" placeholder="https://mywork.com" type="url"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-on-surface-variant mb-2">INSTAGRAM HANDLE</label>
+<div class="relative">
+<span class="absolute left-0 bottom-3 text-on-surface-variant">@</span>
+<input class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-3 pl-5 focus:ring-0 text-body-md w-full" placeholder="handle" type="text"/>
+</div>
+</div>
+<div class="flex flex-col md:col-span-2">
+<label class="font-label-caps text-on-surface-variant mb-2">VIDEO INTRODUCTION LINK</label>
+<input class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-3 focus:ring-0 text-body-md" placeholder="YouTube or Vimeo link (Unlisted preferred)" type="url"/>
+</div>
+</div>
+</section>
+<!-- Section 3: Visual Assets (Uploads) -->
+<section class="form-section-gap">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="photo_library">photo_library</span>
+</div>
+<h2 class="font-headline-md text-primary">Asset Uploads</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Photo Upload -->
+<div class="lg:col-span-2 p-8 bg-white border border-outline-variant rounded-lg">
+<label class="font-label-caps text-on-surface-variant block mb-6">PROFESSIONAL PHOTOGRAPHS (MIN 4)</label>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="aspect-[3/4] border-2 border-dashed border-outline-variant rounded-lg flex flex-col items-center justify-center cursor-pointer hover:bg-surface-container-low transition-colors group">
+<span class="material-symbols-outlined text-outline group-hover:text-primary mb-2" data-icon="add_a_photo">add_a_photo</span>
+<span class="text-[10px] font-label-caps text-outline group-hover:text-primary">UPLOAD</span>
+</div>
+<div class="aspect-[3/4] overflow-hidden rounded-lg relative">
+<img alt="Sample profile" class="w-full h-full object-cover" data-alt="A high-end editorial headshot of a professional model with neutral, soft lighting in a high-fashion studio setting. The color palette is composed of sophisticated whites and deep navy blues, maintaining a bright and pristine light-mode aesthetic. The subject’s expression is composed and elegant, reflecting the prestige of a luxury brand application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm-ZQmNzt329JWcuyR2Zf2kCXWAzGyE3Woi4zdrRyLaFAhj8IyGzMPX_bjamN6iNiwLn00XuG-oaGCn2p6Ra4gRLyvVfyUL-RH4LASL5-7mvU-214mZzFVjBZRld3gUgBKl-I_UbxuTOZAOZeNmYgVJ7-6x1pfC2F2wpH8DbV-4vsBKFXkko9Y2lUSmGd3RBa5rhG75i7PQCOKUrNDfot-gW8nxZXQCHyEn1UkrTNue4p2RN62mndrcgoQN-KyCmveSpsF3gMSk-I8"/>
+<button class="absolute top-2 right-2 bg-on-background/50 text-white p-1 rounded-full hover:bg-error transition-colors" type="button">
+<span class="material-symbols-outlined text-xs" data-icon="close">close</span>
+</button>
+</div>
+<div class="aspect-[3/4] border-2 border-dashed border-outline-variant rounded-lg flex items-center justify-center cursor-pointer hover:bg-surface-container-low"></div>
+<div class="aspect-[3/4] border-2 border-dashed border-outline-variant rounded-lg flex items-center justify-center cursor-pointer hover:bg-surface-container-low"></div>
+</div>
+<p class="mt-4 text-xs text-on-surface-variant">Accepted formats: JPG, PNG. Max 10MB per file. Please include headshot, profile, and full-body shots.</p>
+</div>
+<!-- ID Upload -->
+<div class="p-8 bg-white border border-outline-variant rounded-lg">
+<label class="font-label-caps text-on-surface-variant block mb-6">STUDENT / SCHOOL ID</label>
+<div class="aspect-video border-2 border-dashed border-outline-variant rounded-lg flex flex-col items-center justify-center cursor-pointer hover:bg-surface-container-low transition-colors group p-4 text-center">
+<span class="material-symbols-outlined text-outline group-hover:text-primary mb-2" data-icon="badge">badge</span>
+<span class="text-[10px] font-label-caps text-outline group-hover:text-primary block">UPLOAD DOCUMENT</span>
+<p class="text-[10px] text-on-surface-variant mt-2 leading-tight">Must be a valid institution ID for student category consideration.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Data Security & Consent -->
+<section class="bg-surface-container-low p-10 rounded-xl">
+<div class="flex items-start gap-4 mb-8">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="verified_user">verified_user</span>
+<div>
+<h3 class="font-headline-md text-primary text-2xl mb-2">Secure Submission</h3>
+<p class="text-body-md text-on-surface-variant">Your data is encrypted and handled in accordance with our strict privacy policy. By submitting this form, you certify that all information provided is true and accurate for your World Miss University application.</p>
+</div>
+</div>
+<div class="space-y-4">
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center">
+<input class="w-5 h-5 border-outline rounded-sm text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</div>
+<span class="text-body-md text-on-surface select-none">I agree to the <a class="text-secondary underline underline-offset-4" href="#">Terms and Conditions</a> and Privacy Policy.</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center">
+<input class="w-5 h-5 border-outline rounded-sm text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</div>
+<span class="text-body-md text-on-surface select-none">I verify that I am at least 18 years of age or have legal guardian consent.</span>
+</label>
+</div>
+</section>
+<div class="flex flex-col md:flex-row gap-4 items-center justify-between pt-8 border-t border-outline-variant">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="lock_clock">lock_clock</span>
+<span class="font-label-caps text-[10px]">ENCRYPTED SSL CONNECTION</span>
+</div>
+<div class="flex gap-4">
+<button class="px-8 py-4 font-label-caps border border-outline text-primary hover:bg-surface-container transition-all" type="button">SAVE DRAFT</button>
+<button class="px-12 py-4 font-label-caps bg-primary text-on-primary hover:bg-primary-container transition-all shadow-xl shadow-primary/10" type="submit">SUBMIT APPLICATION</button>
+</div>
+</div>
+</form>
+</main>
+<!-- Footer -->
+<footer class="bg-blue-950 dark:bg-black w-full py-20 mt-32 border-t border-slate-800">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-between items-start gap-8 text-white font-serif text-xs tracking-widest">
+<div>
+<div class="text-xl font-serif uppercase text-yellow-500 mb-6">WORLD MISS UNIVERSITY</div>
+<p class="text-slate-400 max-w-xs leading-relaxed font-body-md tracking-normal mb-8">
+                    An institution dedicated to the preservation of elegance and the celebration of modern achievement since 1986.
+                </p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined opacity-70 cursor-pointer hover:opacity-100" data-icon="social_leaderboard">social_leaderboard</span>
+<span class="material-symbols-outlined opacity-70 cursor-pointer hover:opacity-100" data-icon="public">public</span>
+<span class="material-symbols-outlined opacity-70 cursor-pointer hover:opacity-100" data-icon="mail">mail</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-x-12 gap-y-4">
+<div class="flex flex-col gap-4">
+<a class="text-slate-400 hover:text-white transition-opacity" href="#">Privacy Policy</a>
+<a class="text-slate-400 hover:text-white transition-opacity" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="text-slate-400 hover:text-white transition-opacity" href="#">Press Kit</a>
+<a class="text-slate-400 hover:text-white transition-opacity" href="#">Contact Us</a>
+</div>
+</div>
+<div class="lg:text-right">
+<p class="text-slate-400 mb-2">© 2024 World Miss University. All Rights Reserved.</p>
+<p class="text-slate-500 text-[10px]">Official Registry of International Excellence</p>
+</div>
+</div>
+</footer>
+</body></html>
